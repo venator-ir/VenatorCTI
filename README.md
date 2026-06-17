@@ -92,7 +92,7 @@ Identifies exposed email addresses and breach activity across multiple breach in
 ### Clone Repository
 
 ```bash
-git clone https://gitlab.com/venator-cyber-operations-group/venatorcti.git
+git clone https://github.com/venator-ir/venatorcti.git
 cd venatorcti
 ```
 
