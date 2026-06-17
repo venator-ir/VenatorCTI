@@ -137,7 +137,7 @@ URLSCAN_API_KEY=YOUR_URLSCAN_API_KEY
 streamlit run app.py
 ```
 
-### Access on http://<private IP>:8501
+### Access on http://[private IP]:8501
 
 ![Streamlit run](images/streamlit_run.png)
 
