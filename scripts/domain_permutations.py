@@ -165,28 +165,28 @@ def get_domain_availability_status(status):
         return "Unknown status"
     s = status.lower()
     if "marketed" in s:
-        return "The domain is For Sale."
+        return "Explicitly marketed as for sale via the aftermarket."
     if "reserved" in s:
-        return "The domain is not available for registration"
+        return "Explicitly reserved by ICANN, the registry, or another party."
     if "inactive" in s:
-        return "The domain is registered, but the website is Offline."
+        return "Available for new registration."
     if "parked" in s:
-        return "The domain is Parked."
+        return "Active and parked, possibly available via the aftermarket."
     if "active" in s:
-        return "The website is active- check link if website is parked, offline, or online."
+        return "Registered, but possibly available via the aftermarket. - check screenshot if domain is parked, active, or offline."
 
     descriptions = {
-        "active": "The website is active- check link if website is parked, offline, or online.",
-        "undelegated": "The domain is registered, but the website is Offline.",
+        "active": "Registered, but possibly available via the aftermarket. - check screenshot if domain is parked, active, or offline.",
+        "undelegated": "The domain is not present in DNS.",
         "available": "The domain is For Sale.",
         "unavailable": "The domain is not available for registration.",
-        "unknown": "Unknown status",
+        "unknown": "Unknown status.",
         "deleted": "The domain has been deleted and is not currently active.",
         "on hold": "The domain registration is on hold, usually due to administrative reasons.",
-        "premium": "The domain is For Sale.",
-        "marketed priced active": "The domain is For Sale.",
-        "active parked": "The domain is Parked.",
-        "undelegated inactive": "The domain is registered, but the website is Offline."
+        "premium": "Premium domain name for sale by the registry.",
+        "marketed priced active": "The domain is For Sale- An aftermarket domain with an explicit price.",
+        "active parked": "Registered and parked, but possibly available via the aftermarket.",
+        "undelegated inactive": "The domain is not present in DNS."
     }
     return descriptions.get(status, "Unknown status")
 
